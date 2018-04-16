@@ -2,7 +2,7 @@
 	<section class="breadcrumbs">
 		<div class="container">
 			<span><a href="home">Главная</a></span>
-			<span>Payment failed</span>			
+			<span>Page under construction</span>			
 		</div>
 	</section>
 	<section class="mh30"></section>
@@ -15,7 +15,10 @@
 				<div class="saturated" style="background-image: url(public/img/under-construction-bg.jpg)">
 					<div class="content">
 						<div class="text-center">
-							<img class="stripes" src="public/img/under-contsruction-1-blank.png">
+							<div class="no-entry">
+								<img class="stripes" src="public/img/under-contsruction-1-blank.png">
+								<img class="logo" src="public/img/games/2rotated.png">
+							</div>
 							<h4>Извините. В данный момент идет работа по этому направлению, мы <br> запустим его как только все будет готово!</h4>	
 							<div class="feedback-form">
 								<div class="inputsline flex">

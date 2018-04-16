@@ -605,14 +605,16 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .inputsline input:focus::placeholder{color: #acbcd6;}
 .inputsline .btn{height: 45px;border-radius: 5px;padding: 0 15px!important;font-size: 12px!important;font-weight: 900;letter-spacing: .5px;background-color: #3d4666;}
 
-.static--wrapper .saturated{position: relative;}
+.static--wrapper .saturated{position: relative;background-repeat: no-repeat;background-size: cover;background-position: center;}
 .static--wrapper .saturated .content{position: relative;z-index: 1;}
 .static--wrapper .saturated:before{content:'';display: block;position: absolute;width: 100%;height: 100%;top:0;left:0;background-color: rgba(23, 28, 42, 0.95);}
-.under-construction-page .static--wrapper .content {padding: 120px 0;padding: 120px 0 245px 0;}
+.under-construction-page .static--wrapper .content {padding: 120px 0 245px 0;}
 .under-construction-page .static--wrapper .content .stripes {max-width: 100%;position: relative;z-index: 2;}
-.under-construction-page .static--wrapper .content .player {position: absolute;bottom:0;right: -40px;}
+.under-construction-page .static--wrapper .content .player {position: absolute;bottom:0;right: -40px;height: 80%;}
 .under-construction-page .static--wrapper .content h4 {font: 900 18px 'Lato';padding: 70px 0 40px 0;}
 .under-construction-page .static--wrapper .content .feedback-form{width: 450px;margin: 0px auto 60px auto;}
+.under-construction-page .no-entry{position: relative;}
+.under-construction-page .no-entry .logo{position: absolute;display: inline-block;margin: auto;z-index: 3;top: 60%;width: 19%;left: 40%;}
 
 .not-found-page .static--wrapper .content {padding: 28vh 50px;}
 .not-found-page .static--wrapper .content img{max-width: 90%;}
@@ -652,6 +654,7 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	.statistics--item.chart .last-orders--list .item {margin-bottom: 10px;min-width: 25%;}
 	.post .image {height: 150px;}
 	.breaking-news .post-item .image{min-height: 280px;}
+	.under-construction-page .static--wrapper .content {padding: 70px 0 140px 0;}
 }
 @media(max-width: 991px) {
 	footer .contacts ul li a span{display: block;padding-left: 22px;}
@@ -667,6 +670,10 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	.breaking-news .post-item .image{min-height: 200px;}
 	.comments--block .item.new-reply>.text>.add-reply {padding: 10px 0 10px 0;}
 	.comments--block .item.open>.text>.replies {padding: 0;}
+	.under-construction-page .static--wrapper .content {padding: 50px 0 70px 0;}
+	.under-construction-page .static--wrapper .content h4 {padding: 50px 20% 30px 20%;position: relative;z-index: 3;text-shadow: 0px 0px 7px #000;}
+	.under-construction-page .static--wrapper .content .feedback-form {width: 60%;position: relative;z-index: 3;}
+	.inputsline input {padding-left: 15px;}
 }
 @media (min-width: 850px) and (max-width: 991px) {
 	.container {width: 850px;}
@@ -682,10 +689,11 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	header .buttons .btn.btn-skype i{width: 46px;}
 	header .buttons .btn.btn-login i{width: 46px;}
 	header .buttons .btn.btn-skype{margin-right: 8px;}
-	header .buttons .menu-toggle{display: inline-block;padding: 8px;margin-left: 8px;background: rgba(0, 0, 0, 0.3);border-radius: 3px;cursor: pointer;}
+	header .buttons .menu-toggle{display: inline-block;padding: 8px;margin-left: 8px;border-radius: 3px;cursor: pointer;background-color: transparent;transition: background-color .15s ease;}
+	header .buttons .menu-toggle:active{background-color: rgba(0, 0, 0, 0.3);}
 	header .buttons .menu-toggle .hamburger-box{width: 30px;display: block;z-index: 999;cursor: pointer;}
 	header .menu {overflow:hidden;}
-	header .menu .nav{left: -55%;opacity:0;margin-left: 0;position: absolute;z-index: 99;margin: 0;width: 50%;background: #282c44;transition: left .3s, opacity .5s;}
+	header .menu .nav{left: -55%;opacity:0;margin-left: 0;position: fixed;z-index: 99;margin: 0;width: 50%;background: #282c44;transition: left .3s, opacity .5s;}
 	header .menu .nav.visible{left: 0!important;opacity: 1!important;}
 	header .menu .nav>li{height: auto;float: none;}
 	header .menu .nav>li>a {padding: 20px 20px;}
@@ -770,7 +778,7 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	.payment-fail-page .content .faq {padding-top: 50px;}
 	.thank-you-page .static--wrapper .content img,
 	.payment-fail-page .static--wrapper .content img{max-width: 80%;}
-
+	.under-construction-page .static--wrapper .content {padding: 50px 0 30px 0;}
 }
 
 @media (max-width: 667px) {
@@ -879,6 +887,8 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	.payment-fail-page .static--wrapper .content img{max-width: 75%;}
 	.faq .faqs-list .panel-heading h4{font-size: 10px;}
 	.faq .faqs-list .panel-body{font-size: 10px;}
+	.under-construction-page .static--wrapper .content h4 {padding: 50px 10% 30px 10%;}
+	.under-construction-page .static--wrapper .content .feedback-form {width: 80%;}
 }
 
 @media (max-width: 450px) {
@@ -951,6 +961,8 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 	.payment-fail-page .static--wrapper .content img{max-width: 60%;}
 	.thank-you-page .static--wrapper .content,
 	.payment-fail-page .static--wrapper .content{padding: 20px;}
+	.under-construction-page .static--wrapper .content h4 {padding: 30px 5% 20px 5%;}
+	.under-construction-page .static--wrapper .content .feedback-form {width: 90%;margin: 0px auto 30px auto;}
 }
 
 @media (max-width: 320px) {
