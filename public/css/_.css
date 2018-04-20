@@ -455,7 +455,7 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .statistics--triggers h4{font:900 14px 'Lato';color: #8c9ab0;text-transform: uppercase;padding-bottom: 20px;}
 .statistics--triggers .games-list--triggers{margin-right: -13px;margin-left: -13px;}
 .statistics--triggers .games-list--triggers .item{height: 40px;display: table;padding:0 13px;}
-.statistics--triggers .games-list--triggers .item a{display: table-cell;vertical-align: middle;background-color: #272C43;border-radius: 6px;border: 1px solid #38405D;display: block;height: 40px;}
+.statistics--triggers .games-list--triggers .item a{display: table-cell;vertical-align: middle;background-color: #272C43;border-radius: 6px;border: 1px solid #38405D;display: block;height: 40px;width: 100%;}
 .statistics--triggers .games-list--triggers .item.active a{background-color: #D64137;}
 .statistics--triggers .games-list--triggers .item img{max-height: 85%;max-width: 90%;}
 .statistics--triggers .games-list--triggers .item.active img{-webkit-filter: grayscale(100%) invert(100%); filter: grayscale(100%) invert(100%);}

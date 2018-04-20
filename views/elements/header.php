@@ -1,4 +1,3 @@
-
 <header class="bg-dblue">
 	<div class="container">
 		<div class="flex mh80">
@@ -32,7 +31,7 @@
 				          	<li class="dropdown">
 				          		<a><?= $game ?></a>
 				          		<ul class="submenu">
-				          			<li><a href="woo">Буст MMR</a></li>
+				          			<li><a href="order-boost">Буст MMR</a></li>
 				          			<li><a href="woo">Калибровка аккаунта</a></li>
 				          			<li><a href="woo">Буст медали</a></li>
 				          			<li><a href="woo">Обучение игре</a></li>
