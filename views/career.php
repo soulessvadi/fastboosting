@@ -279,7 +279,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="form">
+			<div class="form colored">
 				<form>
 					<h5>Форма обратной связи</h5>
 					<div class="col-xs-12 col-sm-4">
