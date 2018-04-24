@@ -56,6 +56,13 @@ __.bindAnything = function() {
 			});		
 		});
 	}
+
+	if($('.our-boosters--item').length) {
+		$('.our-boosters--item .btn-down').on('click', function() {
+			$(this).closest('.our-boosters--item').toggleClass('active');
+		});
+	}
+
 	if($('.games-list--triggers').length) {
 		$('.games-list--triggers a[data-tab]').on('click', function() {
 			var button = $(this);
@@ -76,6 +83,31 @@ __.bindAnything = function() {
 				setTimeout(function() { 
 					active_tab.removeClass('inactive').removeClass('active');
 					container.hide().siblings().show();
+				}, 900);
+			}
+		});
+	}	
+
+	if($('.tabs--triggers').length) {
+		$('.tabs--triggers a[data-tab]').on('click', function() {
+			var button = $(this);
+			var tab_id = button.attr('data-tab');
+			var togglable = button.attr('data-togglable') != 'undefined' ? button.attr('data-togglable') : true;
+			var container = $('.tabs--wrapper');
+			var new_tab = $('.tabs--tab[data-tab="'+tab_id+'"]');
+			var active_tab = $('.tabs--tab.active');
+			if(!button.parent().hasClass('active')) {
+				active_tab.addClass('inactive');
+				button.parent().addClass('active').siblings().removeClass('active');
+				new_tab.addClass('active').siblings().removeClass('active');
+				setTimeout(function() { 
+					active_tab.removeClass('inactive') 
+				}, 900);
+			} else if(togglable == 'true') {
+				button.parent().removeClass('active').siblings().removeClass('active');
+				active_tab.addClass('inactive');
+				setTimeout(function() { 
+					active_tab.removeClass('inactive').removeClass('active');
 				}, 900);
 			}
 		});
