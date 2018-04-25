@@ -7,7 +7,7 @@
 		</div>
 	</section>
 	<section class="mh30"></section>
-	<section class="inform">
+	<section class="order-form">
 		<div class="container">		
 
 			<div class="col-sm-12 col-md-9 main-content">
@@ -17,7 +17,7 @@
 					</div>
 					<div class="content">
 						<div class="order-steps--wrapper">
-							<div class="order-steps--row inactive-toggable inactive bordered">
+							<div class="order-steps--row inactive-toggable bordered">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>Выбор качества буста</h6></div>
@@ -87,7 +87,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-steps--row inactive-toggable inactive">
+							<div class="order-steps--row inactive-toggable">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>MMR</h6></div>
@@ -121,7 +121,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-steps--row inactive-toggable inactive">
+							<div class="order-steps--row inactive-toggable">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>Выбор героев</h6></div>
@@ -234,7 +234,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-steps--row inactive-toggable inactive">
+							<div class="order-steps--row inactive-toggable">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>Ваш комментарий</h6></div>
@@ -301,7 +301,7 @@
 			<h3 class="text-center">Наши бустеры</h3>
 			<div class="our-boosters--grid">
 				<div class="item col-xs-12 col-sm-4">
-					<div class="our-boosters--item">
+					<div class="our-boosters--item active">
 						<div class="avatar" style="background-image: url('public/img/avatar.png')"></div>
 						<h5 class="name">Имя бустера #1</h5>
 						<table class="info-table">
@@ -330,6 +330,43 @@
 							</div>
 							<div class="separator"></div>
 							<h6>Знание линий</h6>
+                            <div class="charts">
+	                            <div class="charts-item">
+	                                <div class="chart-presenter">
+		                                <canvas class="chart-canvas" width="60" height="60" data-fill="70"></canvas>
+		                                <div class="value">70%</div>
+	                                </div>
+	                            	<div class="title">Мид</div>
+	                            </div>
+	                            <div class="charts-item">
+	                                <div class="chart-presenter">
+		                                <canvas class="chart-canvas" width="60" height="60" data-fill="70"></canvas>
+		                                <div class="value">70%</div>
+	                                </div>
+	                            	<div class="title">Керри</div>
+	                            </div>
+	                            <div class="charts-item">
+	                                <div class="chart-presenter">
+		                                <canvas class="chart-canvas" width="60" height="60" data-fill="70"></canvas>
+		                                <div class="value">70%</div>
+	                                </div>
+	                            	<div class="title">Саппорт</div>
+	                            </div>
+	                            <div class="charts-item">
+	                                <div class="chart-presenter">
+		                                <canvas class="chart-canvas" width="60" height="60" data-fill="70"></canvas>
+		                                <div class="value">70%</div>
+	                                </div>
+	                            	<div class="title">Тяжелая</div>
+	                            </div>
+	                            <div class="charts-item">
+	                                <div class="chart-presenter">
+		                                <canvas class="chart-canvas" width="60" height="60" data-fill="70"></canvas>
+		                                <div class="value">70%</div>
+	                                </div>
+	                            	<div class="title">Роуминг</div>
+	                            </div>
+	                        </div>
 							<div class="separator"></div>
 							<h6>О тренере</h6>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus vel quibusdam est consequatur quis autem vero rerum quia architecto voluptas cum reiciendis nostrum, eligendi, saepe ipsa ullam quos veritatis dolorum.</p>
@@ -420,7 +457,7 @@
 		</div>
 	</section>
 	<section class="guarantees block-section">
-		<div class="container-fluid">
+		<div>
 			<div class="container">
 				<h6 class="block-title">Наши гарантии</h6>
 				<div class="content flex">
@@ -470,6 +507,101 @@
 					</div>	
 				</div>						
 			</div>	
+		</div>
+	</section>
+	<section class="works block-section">
+		<div class="container">
+			<h6 class="block-title">Наша работа</h6>
+			<div class="works-block">
+				<div class="cell col-xs-offset-2 col-sm-offset-3 col-md-offset-0 col-xs-8  col-sm-6 col-md-4 col-lg-4">
+					<div class="works-slider">
+						<div class="carousel slide" id="works-slider" data-ride="carousel">
+		  					<div class="carousel-inner">
+		  						<?php for($x = 0; $x < 4; $x++): ?>
+								<div class="item <?= !$x ? 'active' : '' ?>">
+									<a class="zoom js-zoom-images to-gallery" href="public/img/work1.jpg" target="_blank">
+										<img src="public/img/work1.jpg" alt="">
+									</a>
+								</div>
+								<?php endfor; ?>
+							</div>
+							<div class="controls">
+								<a class="prev" href="#works-slider" data-slide="prev"><i class="icon icon-left-open"></i></a>
+								<a class="next" href="#works-slider" data-slide="next"><i class="icon icon-right-open"></i></a>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cell col-xs-12 col-sm-12 col-md-8 col-lg-8">
+					<div class="works-reviews">
+						<div class="item col-xs-6">
+							<div class="review">
+								<div class="item">
+									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+									<div class="text">
+										<h6>Андрей Бустер</h6>
+										<div class="theme">Буст аккаунта Dota2</div>
+										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+										<div class="message">
+											<p>Отличный сервис, рекомендую</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item col-xs-6">
+							<div class="review">
+								<div class="item">
+									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+									<div class="text">
+										<h6>Андрей Бустер</h6>
+										<div class="theme">Буст аккаунта Dota2</div>
+										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+										<div class="message">
+											<p>Отличный сервис, рекомендую</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item col-xs-6">
+							<div class="review">
+								<div class="item">
+									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+									<div class="text">
+										<h6>Андрей Бустер</h6>
+										<div class="theme">Буст аккаунта Dota2</div>
+										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+										<div class="message">
+											<p>Отличный сервис, рекомендую</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item col-xs-6">
+							<div class="review">
+								<div class="item">
+									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+									<div class="text">
+										<h6>Андрей Бустер</h6>
+										<div class="theme">Буст аккаунта Dota2</div>
+										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+										<div class="message">
+											<p>Отличный сервис, рекомендую</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<i class="clear"></i>
+			</div>
+			<div class="seo-text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores mollitia quidem iste itaque neque, et reiciendis, possimus tempore placeat. Explicabo vel ipsam quaerat debitis hic aliquam ut neque laboriosam, non.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus quas, suscipit veritatis, vitae veniam illo praesentium tempore sit, at cupiditate! Vero recusandae, ratione esse assumenda voluptate in praesentium eaque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, explicabo sunt. Explicabo neque eveniet, similique voluptate vitae, accusamus quam odio dicta veritatis debitis fugiat quas, consectetur incidunt tempore! Omnis, voluptas.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores mollitia quidem iste itaque neque, et reiciendis, possimus tempore placeat. Explicabo vel ipsam quaerat debitis hic aliquam ut neque laboriosam, non.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus quas, suscipit veritatis, vitae veniam illo praesentium tempore sit, at cupiditate! Vero recusandae, ratione esse assumenda voluptate in praesentium eaque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, explicabo sunt. Explicabo neque eveniet, similique voluptate vitae, accusamus quam odio dicta veritatis debitis fugiat quas, consectetur incidunt tempore! Omnis, voluptas.
+			</div>
 		</div>
 	</section>
 </main>
