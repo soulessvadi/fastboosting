@@ -19,8 +19,8 @@
 							<h4>СТАТЬИ</h4>
 							<div class="filter--block spaced">
 								<p class="name">Выбор игры:</p>
-								<button class="btn btn-red dropdown">
-									<img class="dropdown--image" src="public/img/games/1w.png">
+								<div class="dropdown">
+									<a class="btn btn-red" tabindex="1"><img class="dropdown--image" src="public/img/games/1w.png"></a>
 									<ul class="dropdown--list">
 										<li class="dropdown--item"><img src="public/img/games/1w.png"></li>
 										<li class="dropdown--item"><img src="public/img/games/1w.png"></li>
@@ -28,7 +28,7 @@
 										<li class="dropdown--item"><img src="public/img/games/1w.png"></li>
 										<li class="dropdown--item"><img src="public/img/games/1w.png"></li>
 									</ul>
-								</button>								
+								</div>
 							</div>	
 							<div class="filter--block">
 								<div class="filter--selects">

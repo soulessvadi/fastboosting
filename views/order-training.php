@@ -130,9 +130,9 @@
 												<div class="item choose-heroes">
 													<label class="checkbox-line">
 														<span>Освоить конкретного героя</span>
-														<button class="btn btn-red" data-toggle="modal" data-target=".heroes-select-modal">Выбор героев</button>
 														<input type="checkbox" name="box" checked>
 														<span class="checkmark"></span>
+														<button class="btn btn-red" data-toggle="modal" data-target=".heroes-select-modal">Выбор героев</button>
 													</label>
 													<div class="chosen-heroes-list">
 														<label class="hero-box">

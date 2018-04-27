@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="public/css/foundation-flex.css">
     <link rel="stylesheet" href="public/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/hamburger.css">
-    <link rel="stylesheet" href="public/css/_.css">
+    <link rel="stylesheet" href="public/css/_.css?v=<?= microtime() ?>">
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> -->
 </head>
 <body>

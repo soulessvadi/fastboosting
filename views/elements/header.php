@@ -10,13 +10,13 @@
 
 			<div class="locale columns shrink">
 				<div class="locale-container">
-					<button class="dropdown-trigger icon-chevron" data-target="locales">
-						<span>ru</span>
+					<div class="dropdown">
+						<a class="dropdown-trigger icon-chevron" data-target="locales" tabindex="1"><span>ru</span></a>
 						<ul class="dropdown-content" id="locales">
 						  <li><a>en</a></li>
 						  <li><a>ua</a></li>
-						</ul>
-					</button>
+						</ul>						
+					</div>	
 				</div>
 			</div>
 
