@@ -13,101 +13,186 @@
 			<div class="col-sm-12 col-md-9 main-content">
 				<div class="static--wrapper">
 					<div class="header">
-						<h2>БУСТ АККАУНТА: DOTA2</h2>
+						<h2>БУСТ АККАУНТА ДЛЯ МЕДАЛИ: DOTA2</h2>
 					</div>
 					<div class="content">
 						<div class="order-steps--wrapper">
-							<div class="order-steps--row inactive-toggable bordered" data-step="1">
+							<div class="order-steps--row inactive-toggable" data-step="1">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
-									<div class="row-header"><h6>Выбор качества буста</h6></div>
+									<div class="row-header"><h6>Выбор медали</h6></div>
 									<div class="row-body">
-										<div class="price-table">
-											<div class="price-cell">
-												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/standard.jpg)"></div>
-													<div class="price-body">
-														<h6 class="title">STANDART</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-														</ul>
-													</div>
-													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
+										<div class="row-medals">
+											<div class="medals-selector">
+												<div class="item">
+													<div class="medal le-dr-selector">
+														<h6>Текущая медаль</h6>
+														<div class="medal-class leading">
+															<div class="list">
+																<span data-le="1" class="active">Herald</span>
+																<span data-le="2">Guardian</span>
+																<span data-le="3">Crusader</span>
+																<span data-le="4">Archon</span>
+																<span data-le="5">Legend</span>
+																<span data-le="6">Ancient</span>
+																<span data-le="7">Devine</span>
+															</div>
+															<div class="controlls">
+																<span class="prev"><i class="icon icon-left-open"></i></span>
+																<span class="next"><i class="icon icon-right-open"></i></span>
+															</div>
+														</div>
+														<div class="medal-rank driven">
+															<div class="list">
+																<div data-le="1" class="active">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank1-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank1-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank1-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank1-3.png"></div>
+																	<div data-dr="5" class="active"><img src="public/img/ranks/cropped/180px-SeasonalRank1-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank1-5.png"></div>
+																</div>
+																<div data-le="2">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank2-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank2-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank2-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank2-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank2-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank2-5.png"></div>
+																</div>
+																<div data-le="3">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank3-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank3-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank3-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank3-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank3-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank3-5.png"></div>
+																</div>
+																<div data-le="4">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank4-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank4-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank4-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank4-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank4-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank4-5.png"></div>
+																</div>
+																<div data-le="5">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank5-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank5-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank5-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank5-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank5-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank5-5.png"></div>
+																</div>
+																<div data-le="6">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank6-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank6-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank6-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank6-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank6-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank6-5.png"></div>
+																</div>
+																<div data-le="7">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank7-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank7-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank7-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank7-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank7-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank7-5.png"></div>
+																</div>
+															</div>
+															<div class="controlls">
+																<span class="prev"><i class="icon icon-left-open"></i></span>
+																<span class="next"><i class="icon icon-right-open"></i></span>
+															</div>
+														</div>
 													</div>
 												</div>
-											</div>
-											<div class="price-cell active">
-												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/gold.jpg)"></div>
-													<div class="price-body">
-														<h6 class="title">GOLD</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li>Опция #3</li>
-															<li>Опция #4</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-														</ul>
-													</div>
-													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
-													</div>
+												<div class="item">
+													<div class="medal le-dr-selector">
+														<h6>Желаемая медаль</h6>
+														<div class="medal-class leading">
+															<div class="list">
+																<span data-le="1">Herald</span>
+																<span data-le="2">Guardian</span>
+																<span data-le="3">Crusader</span>
+																<span data-le="4">Archon</span>
+																<span data-le="5">Legend</span>
+																<span data-le="6">Ancient</span>
+																<span data-le="7" class="active">Devine</span>
+															</div>
+															<div class="controlls">
+																<span class="prev"><i class="icon icon-left-open"></i></span>
+																<span class="next"><i class="icon icon-right-open"></i></span>
+															</div>
+														</div>
+														<div class="medal-rank driven">
+															<div class="list">
+																<div data-le="1">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank1-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank1-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank1-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank1-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank1-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank1-5.png"></div>
+																</div>
+																<div data-le="2">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank2-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank2-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank2-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank2-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank2-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank2-5.png"></div>
+																</div>
+																<div data-le="3">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank3-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank3-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank3-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank3-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank3-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank3-5.png"></div>
+																</div>
+																<div data-le="4">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank4-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank4-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank4-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank4-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank4-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank4-5.png"></div>
+																</div>
+																<div data-le="5">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank5-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank5-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank5-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank5-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank5-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank5-5.png"></div>
+																</div>
+																<div data-le="6">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank6-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank6-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank6-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank6-3.png"></div>
+																	<div data-dr="5"><img src="public/img/ranks/cropped/180px-SeasonalRank6-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank6-5.png"></div>
+																</div>
+																<div data-le="7" class="active">
+																	<div data-dr="1"><img src="public/img/ranks/cropped/180px-SeasonalRank7-0.png"></div>
+																	<div data-dr="2"><img src="public/img/ranks/cropped/180px-SeasonalRank7-1.png"></div>
+																	<div data-dr="3"><img src="public/img/ranks/cropped/180px-SeasonalRank7-2.png"></div>
+																	<div data-dr="4"><img src="public/img/ranks/cropped/180px-SeasonalRank7-3.png"></div>
+																	<div data-dr="5" class="active"><img src="public/img/ranks/cropped/180px-SeasonalRank7-4.png"></div>
+																	<div data-dr="6"><img src="public/img/ranks/cropped/180px-SeasonalRank7-5.png"></div>
+																</div>
+															</div>
+															<div class="controlls">
+																<span class="prev"><i class="icon icon-left-open"></i></span>
+																<span class="next"><i class="icon icon-right-open"></i></span>
+															</div>
+														</div>
+													</div>													
 												</div>
 											</div>
-											<div class="price-cell">
-												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/premium.jpg)"></div>
-													<div class="price-body">
-														<h6 class="title">PREMIUM</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li>Опция #3</li>
-															<li>Опция #4</li>
-															<li>Опция #5</li>
-															<li>Опция #6</li>
-														</ul>
-													</div>
-													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="order-steps--row inactive-toggable" data-step="2">
-								<div class="row-btn"><button class="inactive-toggle"></button></div>
-								<div class="row-content">
-									<div class="row-header"><h6>MMR</h6></div>
-									<div class="row-body">
-										<div class="slider order-slider">
-											<div class="slider-inputs left">
-												<label>
-													<span>Текущий MMR</span>
-													<input type="text" value="3500" class="from">
-												</label>
-											</div>
-											<div class="slider-inputs right">
-												<label>
-													<span>Желаемый MMR</span>
-													<input type="text" value="3800" class="to">
-												</label>
-											</div>
-											<div class="slider-toddler">
-												<div class="slider--double" data-min="0" data-max="8000" data-start="2400" data-end="6333" data-pips="9"></div>
-											</div>											
 										</div>
 										<div class="row-text">
 											<h6>Защита от бана</h6>
@@ -121,7 +206,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-steps--row inactive-toggable" data-step="3">
+							<div class="order-steps--row inactive-toggable" data-step="2">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>Выбор героев</h6></div>
@@ -196,7 +281,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-steps--row inactive-toggable" data-step="4">
+							<div class="order-steps--row inactive-toggable" data-step="3">
 								<div class="row-btn"><button class="inactive-toggle"></button></div>
 								<div class="row-content">
 									<div class="row-header"><h6>Ваш комментарий</h6></div>
@@ -226,7 +311,7 @@
 							</tr>
 							<tr>
 								<td>Услуга:</td>
-								<td><b>Буст аккаунта</b></td>
+								<td><b>БУСТ АККАУНТА ДЛЯ МЕДАЛИ</b></td>
 							</tr>
 						</table>
 						<h5>Стоимость услуги</h5>
@@ -234,12 +319,12 @@
 						<div class="separator"></div>
 						<table class="info-table">
 							<tr>
-								<td>MMR 1000-5000</td>
-								<td><b>$50.00</b></td>
+								<td>Текущая медаль</td>
+								<td><b>HERALD 4</b></td>
 							</tr>
 							<tr>
-								<td>Premium Boost</td>
-								<td><b>$10.00</b></td>
+								<td>Желаемая медаль</td>
+								<td><b>DIVINE 4</b></td>
 							</tr>
 							<tr>
 								<td>Защита от бана</td>
@@ -256,7 +341,7 @@
 						</div>	
 					</div>
 				</div>
-			</div>		
+			</div>	
 
 		</div>
 	</section>

@@ -23,6 +23,10 @@ $(document).ready(function() {
 });
 
 var __ = {};
+__.step = function(step) {
+	$('div[data-step="'+step+'"]').removeClass('inactive');
+	$('div[data-step="'+(step - 1)+'"]').addClass('inactive');
+}
 __.charts_establish = function(el) {
 	el.each(function() {
 	    var fill = parseInt($(this).attr('data-fill'));
@@ -48,8 +52,92 @@ __.charts_establish = function(el) {
 	});
 },
 __.bindAnything = function() {
+	if($('.le-dr-selector').length) {
+		$('.le-dr-selector').each(function() {
+			var selector = $(this);
+			var lcontrolls = $(this).find('.leading .controlls');
+			var dcontrolls = $(this).find('.driven .controlls');
+			var ltitles = $(this).find('.leading .list');
+			var lwindows = $(this).find('.driven .list');
+			var show_if_not_shown = function() {
+				var dwindows = lwindows.find('[data-le].active');
+				var dwindow = dwindows.find('[data-dr].active');
+				if(!dwindow.length) dwindow = dwindows.find('[data-dr]').first().addClass('active');
+				return {dwindows:dwindows,dwindow:dwindow};
+			};
+			var ltrigger = {
+				prev: function() { 
+					var prev = ltitles.find('[data-le].active').prev().length ? ltitles.find('[data-le].active').prev() : ltitles.find('[data-le]').last();
+					prev.addClass('active').siblings().removeClass('active');
+					let id = ltitles.find('[data-le].active').attr('data-le');
+					lwindows.find('[data-le="'+id+'"]').addClass('active').siblings().removeClass('active');
+					show_if_not_shown();
+				},
+				next: function() { 
+					var next = ltitles.find('[data-le].active').next().length ? ltitles.find('[data-le].active').next() : ltitles.find('[data-le]').first();
+					next.addClass('active').siblings().removeClass('active');
+					let id = ltitles.find('[data-le].active').attr('data-le');
+					lwindows.find('[data-le="'+id+'"]').addClass('active').siblings().removeClass('active');
+					show_if_not_shown();
+				},
+			};
+			var dtrigger = {
+				prev: function() { 
+					let sins = show_if_not_shown();
+					var dwindows = sins.dwindows;
+					var dwindow = sins.dwindow;
+					var prev = dwindow.prev().length ? dwindow.prev() : dwindows.find('[data-dr]').last();
+					prev.addClass('active').siblings().removeClass('active');
+					prev.find('input').attr('checked', true);
+				},
+				next: function() { 
+					let sins = show_if_not_shown();
+					var dwindows = sins.dwindows;
+					var dwindow = sins.dwindow;
+					var next = dwindow.next().length ? dwindow.next() : dwindows.find('[data-dr]').first();
+					next.addClass('active').siblings().removeClass('active');
+					next.find('input').attr('checked', true);
+				},
+			};
+			lcontrolls.find('.prev, .next').on('click', function() {
+				var next = $(this).hasClass('next');
+				if(next) ltrigger.next();
+				else ltrigger.prev();	
+			});
+			dcontrolls.find('.prev, .next').on('click', function() {
+				var next = $(this).hasClass('next');
+				if(next) dtrigger.next();
+				else dtrigger.prev();	
+			});
+			show_if_not_shown();
+		});
+	}
+	if($('.hero-select').length) {
+		$('.hero-select').find('input[type="checkbox"]').on('change', function() {
+			var ban = parseInt($('[name="pick_or_ban"]:checked').val());
+			if(ban) $(this).closest('label').addClass('banned');
+		});
+	}
 	if($('.chart-canvas').length) {
 		this.charts_establish($('.chart-canvas')); 
+	}
+	if($('.chaser').length) {
+		$('.chaser').each(function() {
+			var chaser = $(this);
+			var wrapper = chaser.parent();
+			var wrapperh = wrapper.outerHeight();
+			var posY = parseInt(chaser.offset().top);
+			chaser.posY = isdefined(chaser.posY) ? chaser.posY : posY;
+			chaser.is_chasing = false;
+			$(window).on('scroll resize', function() {
+				var wint = $(window).scrollTop();
+				var chaser_pos = posY - wint;
+				var zero_pos = wint - chaser.posY;
+				if(chaser_pos < 0) chaser.addClass('chasing'), chaser.is_chasing = true, wrapper.css('height', wrapperh);
+				else chaser.removeClass('chasing'), chaser.is_chasing = false, wrapper.css('height', "");
+				if(chaser.is_chasing) chaser.css({top : zero_pos});
+			});
+		});
 	}
 	if($('.slider .slider--double').length) {
 		$('.slider .slider--double').each(function() {
@@ -61,6 +149,8 @@ __.bindAnything = function() {
 			var pips = parseInt($(slider).attr('data-pips'));
 			noUiSlider.create(slider, {
 				start: [ start, end ],
+				step: 25,
+				margin: 25,
 				connect: true,
 				range: { min: min, max: max },
 				pips: pips 
@@ -83,6 +173,84 @@ __.bindAnything = function() {
 			to_input.on('change', function() {
 				slider.noUiSlider.set([null, this.value]);
 			});		
+		});
+	}
+	if($('.slider .slider--single').length) {
+		$('.slider .slider--single').each(function() {
+			var slider = this;
+			var min = parseInt($(slider).attr('data-min')) || 0;
+			var max = parseInt($(slider).attr('data-max')) || 0;
+			var start = parseInt($(slider).attr('data-start')) || 0;
+			var pips = parseInt($(slider).attr('data-pips'));
+			noUiSlider.create(slider, {
+				start: start,
+				step: 25,
+				margin: 25,
+				connect: [true, false],
+				range: { min: min, max: max },
+				pips: pips 
+				? 	{ mode: 'count', values: pips, density: pips, format: {
+			    	  to: function (value) { return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+				    } 
+				} 
+				: false
+			});
+			var input = $(slider).closest('.slider').find('input.value');
+			slider.noUiSlider.on('update', function(values, handle) {
+				var value = parseInt(values[handle]);
+				if(handle) input.val(Math.round(value));
+				else input.val(Math.round(value));
+			});
+			input.on('change', function() {
+				slider.noUiSlider.set([this.value, null]);
+			});	
+		});
+	}
+
+	if($('.slider .slider--boobled').length) {
+		$('.slider .slider--boobled').each(function() {
+			var slider = this;
+			var min = parseInt($(slider).attr('data-min')) || 0;
+			var max = parseInt($(slider).attr('data-max')) || 0;
+			var start = parseInt($(slider).attr('data-start')) || 0;
+			var pips = parseInt($(slider).attr('data-pips'));
+			var postfix = $(slider).attr('data-postfix') || "";
+			noUiSlider.create(slider, {
+				start: start,
+				step: 1,
+				margin: 1,
+				connect: [true, false],
+				range: { min: min, max: max },
+				pips: pips 
+				? 	{ mode: 'count', values: pips, density: pips*2, format: {
+			    	  to: function (value) { return value + postfix; }
+				    } 
+				} 
+				: false
+			});
+			var input = $(slider).closest('.slider').find('input.value');
+			slider.noUiSlider.on('update', function(values, handle) {
+				var value = parseInt(values[handle]);
+				if(handle) input.val(Math.round(value));
+				else input.val(Math.round(value));
+			});
+			input.on('change', function() {
+				slider.noUiSlider.set([this.value, null]);
+			});	
+		});
+	}
+
+	if($('.slider .slider--highlighted').length) {
+		$('.slider .slider--highlighted').each(function() {
+			var slider = this;
+			slider.noUiSlider.on('update', function(values, handle) {
+				var value = parseInt(values[handle]);
+        		var pips = $(slider).find('.noUi-value');
+        		pips.each(function() { 
+        			if($(this).attr('data-value') <= value) $(this).addClass('highlight');
+        			else $(this).removeClass('highlight');
+        		});
+			});	
 		});
 	}
 
@@ -137,22 +305,21 @@ __.bindAnything = function() {
 	}	
 
 	if($('.tabs--triggers').length) {
-		$('.tabs--triggers a[data-tab]').on('click', function() {
+		$('.tabs--triggers [data-tab]').on('click', function() {
 			var button = $(this);
 			var tab_id = button.attr('data-tab');
 			var togglable = button.attr('data-togglable') != 'undefined' ? button.attr('data-togglable') : true;
 			var container = $('.tabs--wrapper');
 			var new_tab = $('.tabs--tab[data-tab="'+tab_id+'"]');
 			var active_tab = $('.tabs--tab.active');
+			button.parent().addClass('active').siblings().removeClass('active');
 			if(!button.parent().hasClass('active')) {
 				active_tab.addClass('inactive');
-				button.parent().addClass('active').siblings().removeClass('active');
 				new_tab.addClass('active').siblings().removeClass('active');
 				setTimeout(function() { 
 					active_tab.removeClass('inactive') 
 				}, 900);
 			} else if(togglable == 'true') {
-				button.parent().removeClass('active').siblings().removeClass('active');
 				active_tab.addClass('inactive');
 				setTimeout(function() { 
 					active_tab.removeClass('inactive').removeClass('active');
@@ -196,4 +363,9 @@ __.bindAnything = function() {
 			});
 		}
 
+}
+
+
+function isdefined(mixed) {
+	return typeof mixed != typeof undefined;
 }

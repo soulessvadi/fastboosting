@@ -4,7 +4,7 @@
 
 			<div class="logo columns shrink">
 				<a href="home">
-					<img src="public/img/logo.png" alt="fastboosting">
+					<img src="public/img/logo.svg" alt="fastboosting" style="max-height: 30px;">
 				</a>
 			</div>
 
@@ -32,9 +32,9 @@
 				          		<a><?= $game ?></a>
 				          		<ul class="submenu">
 				          			<li><a href="order-boost">Буст MMR</a></li>
-				          			<li><a href="woo">Калибровка аккаунта</a></li>
-				          			<li><a href="woo">Буст медали</a></li>
-				          			<li><a href="woo">Обучение игре</a></li>
+				          			<li><a href="order-cali">Калибровка аккаунта</a></li>
+				          			<li><a href="order-medal">Буст медали</a></li>
+				          			<li><a href="order-training">Обучение игре</a></li>
 				          		</ul>
 				          	</li>
 				          	<?php else: ?>

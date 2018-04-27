@@ -13,197 +13,45 @@
 			<div class="col-sm-12 col-md-9 main-content">
 				<div class="static--wrapper">
 					<div class="header">
-						<h2>БУСТ АККАУНТА: DOTA2</h2>
+						<h2>КАЛИБРОВКА АККАУНТА: DOTA2</h2>
 					</div>
 					<div class="content">
 						<div class="order-steps--wrapper">
-							<div class="order-steps--row inactive-toggable bordered" data-step="1">
-								<div class="row-btn"><button class="inactive-toggle"></button></div>
+							<div class="order-steps--row not-toggable">
 								<div class="row-content">
-									<div class="row-header"><h6>Выбор качества буста</h6></div>
 									<div class="row-body">
-										<div class="price-table">
-											<div class="price-cell">
-												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/standard.jpg)"></div>
-													<div class="price-body">
-														<h6 class="title">STANDART</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-														</ul>
-													</div>
-													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
-													</div>
-												</div>
-											</div>
+										<div class="price-table horizontal">
 											<div class="price-cell active">
 												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/gold.jpg)"></div>
+													<div class="price-info">
+														<div class="tags"><a class="tag tag-discount" href="javascript:void(0)">Скидки</a></div>
+													</div>
 													<div class="price-body">
-														<h6 class="title">GOLD</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li>Опция #3</li>
-															<li>Опция #4</li>
-															<li class="inactive">x</li>
-															<li class="inactive">x</li>
-														</ul>
+														<h6 class="title">КАЛИБРОВКА С ГАРАНТИЕЙ</h6>
+														<h6 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+														<h6 class="price">$50.00</h6>
 													</div>
 													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
+														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active');">ВЫБРАТЬ</button>
 													</div>
 												</div>
 											</div>
 											<div class="price-cell">
 												<div class="price-entity">
-													<div class="price-cover" style="background-image: url(public/img/order/premium.jpg)"></div>
+													<div class="price-info">
+														<div class="tags"></div>
+													</div>
 													<div class="price-body">
-														<h6 class="title">PREMIUM</h6>
-														<h6 class="price"><span>$</span>50</h6>
-														<ul class="options">
-															<li>Опция #1</li>
-															<li>Опция #2</li>
-															<li>Опция #3</li>
-															<li>Опция #4</li>
-															<li>Опция #5</li>
-															<li>Опция #6</li>
-														</ul>
+														<h6 class="title">КАЛИБРОВКА БЕЗ ГАРАНТИЙ</h6>
+														<h6 class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+														<h6 class="price">$10.00</h6>
 													</div>
 													<div class="price-footer">
-														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active'); __.step(2);">ВЫБРАТЬ</button>
+														<button class="btn btn-red runner" onclick="$(this).closest('.price-cell').addClass('active').siblings().removeClass('active');">ВЫБРАТЬ</button>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							<div class="order-steps--row inactive-toggable" data-step="2">
-								<div class="row-btn"><button class="inactive-toggle"></button></div>
-								<div class="row-content">
-									<div class="row-header"><h6>MMR</h6></div>
-									<div class="row-body">
-										<div class="slider order-slider">
-											<div class="slider-inputs left">
-												<label>
-													<span>Текущий MMR</span>
-													<input type="text" value="3500" class="from">
-												</label>
-											</div>
-											<div class="slider-inputs right">
-												<label>
-													<span>Желаемый MMR</span>
-													<input type="text" value="3800" class="to">
-												</label>
-											</div>
-											<div class="slider-toddler">
-												<div class="slider--double" data-min="0" data-max="8000" data-start="2400" data-end="6333" data-pips="9"></div>
-											</div>											
-										</div>
-										<div class="row-text">
-											<h6>Защита от бана</h6>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo dicta totam accusantium quas nobis quia sequi autem eligendi ea similique commodi neque id quidem eveniet repudiandae ut magni perspiciatis, atque.</p>
-											<label class="checkbox-line">
-												<span>Я согласен с условиями и готов использовать защиту от бана</span>
-												<input type="checkbox" name="box">
-												<span class="checkmark"></span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="order-steps--row inactive-toggable" data-step="3">
-								<div class="row-btn"><button class="inactive-toggle"></button></div>
-								<div class="row-content">
-									<div class="row-header"><h6>Выбор героев</h6></div>
-									<div class="row-body row-no-bottom-space">
-										<div class="row-tabs--header">
-											<div class="tabs--triggers">
-												<div class="item active">
-													<label href="javascript:void(0)" data-tab="0">
-														Выбор героев
-														<input type="radio" name="pick_or_ban" value="0" checked>
-													</label>
-												</div>	
-												<div class="item">
-													<label href="javascript:void(0)" data-tab="0">
-														Бан героев
-														<input type="radio" name="pick_or_ban" value="1">
-													</label>
-												</div>	
-											</div>
-											<div class="form">
-												<label class="search">
-													<input type="text" placeholder="Поиск по имени..."><button></button>
-												</label>
-											</div>		
-										</div>
-										<div class="tabs--wrapper">
-											<div class="tabs--tab active">
-												<div class="alert">
-													<div class="icon"></div>
-													<div class="text">
-														<span>Минимальное количество героев доступное для выбора: <b>5</b></span>
-														<span>Вы выбрали: <b>3</b></span>
-													</div>
-												</div>
-												<div class="hero-select">
-													<div class="hero-column col-xs-4 col-sm-4">
-														<div class="hero-header"><h6>Сила</h6></div>
-														<div class="hero-list">
-															<?php for($x=0;$x<30;$x++): ?>
-																<label class="hero-box">
-																	<input type="checkbox">
-																	<i class="image" style="background-image: url('public/img/abba.jpg');"></i>
-																</label>
-															<?php endfor; ?>
-														</div>
-													</div>
-													<div class="hero-column col-xs-4 col-sm-4">
-														<div class="hero-header"><h6>Ловкость</h6></div>
-														<div class="hero-list">
-															<?php for($x=0;$x<30;$x++): ?>
-																<label class="hero-box">
-																	<input type="checkbox">
-																	<i class="image" style="background-image: url('public/img/abba.jpg');"></i>
-																</label>
-															<?php endfor; ?>
-														</div>
-													</div>
-													<div class="hero-column col-xs-4 col-sm-4">
-														<div class="hero-header"><h6>Интеллект</h6></div>
-														<div class="hero-list">
-															<?php for($x=0;$x<30;$x++): ?>
-																<label class="hero-box">
-																	<input type="checkbox">
-																	<i class="image" style="background-image: url('public/img/abba.jpg');"></i>
-																</label>
-															<?php endfor; ?>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>											
-									</div>
-								</div>
-							</div>
-							<div class="order-steps--row inactive-toggable" data-step="4">
-								<div class="row-btn"><button class="inactive-toggle"></button></div>
-								<div class="row-content">
-									<div class="row-header"><h6>Ваш комментарий</h6></div>
-									<div class="row-body form">
-										<label>
-											<textarea placeholder="Введите ваше сообщение"></textarea>
-										</label>
 									</div>
 								</div>
 							</div>
@@ -226,7 +74,7 @@
 							</tr>
 							<tr>
 								<td>Услуга:</td>
-								<td><b>Буст аккаунта</b></td>
+								<td><b>Калибровка аккаунта</b></td>
 							</tr>
 						</table>
 						<h5>Стоимость услуги</h5>
@@ -234,16 +82,8 @@
 						<div class="separator"></div>
 						<table class="info-table">
 							<tr>
-								<td>MMR 1000-5000</td>
+								<td>Калибровка с гарантией</td>
 								<td><b>$50.00</b></td>
-							</tr>
-							<tr>
-								<td>Premium Boost</td>
-								<td><b>$10.00</b></td>
-							</tr>
-							<tr>
-								<td>Защита от бана</td>
-								<td><b>$5.00</b></td>
 							</tr>
 						</table>
 						<div class="separator"></div>	
@@ -256,7 +96,7 @@
 						</div>	
 					</div>
 				</div>
-			</div>		
+			</div>	
 
 		</div>
 	</section>
