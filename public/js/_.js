@@ -52,6 +52,12 @@ __.charts_establish = function(el) {
 	});
 },
 __.bindAnything = function() {
+	if($('.profile-sidebar-trigger').length) {
+		$('.profile-sidebar-trigger').on('click', function() {
+			$(this).toggleClass('is-active');
+			$(this).siblings('.menu-list').toggleClass('active');
+		});
+	}
 	if($('.le-dr-selector').length) {
 		$('.le-dr-selector').each(function() {
 			var selector = $(this);
