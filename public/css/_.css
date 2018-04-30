@@ -83,7 +83,8 @@ pre {
 @media(min-width: 0px) and (max-width: 767px) { .chaser.chaser-xs.chasing{position: absolute;box-shadow: 0 0px 3px -1px #39cb71;opacity: 0.95;} }
 
 button:focus,a:focus{color: #fff!important;}
-a, button{text-decoration: none!important;outline: none;cursor: pointer;}
+a, button{text-decoration: none;outline: none!important;cursor: pointer;}
+a:active,a:link,a:hover{text-decoration: none;}
 html{position: relative;z-index: 0;min-height: 100vh;background-color: #1F2535;}
 body{margin: 0; padding: 0; box-sizing: border-box;background-color: transparent;font-family: 'Lato', sans-serif;color: #8c9ab0;}
 
@@ -178,13 +179,6 @@ footer .paysystems a:after{content:'';display: inline-block;vertical-align: midd
 footer .paysystems a img{vertical-align: middle;max-height: 34px;opacity: 0.8; transition: all .2s;}
 footer .paysystems a:hover img{opacity: 1;}
 footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
-
-.popup-wrapper{border-radius: 5px;border: 1px solid #38405D;background-color: #272C43;position: relative;}
-.popup-wrapper .close{height: 22px;width: 22px;border-radius: 50%;opacity: 1;transition: all .2s;background: #e54e3d url(../img/icons/xw.png) center no-repeat;background-size: 8px;top: 10px;right: 10px;position: absolute;}
-.popup-wrapper .close:hover{background-color: #ff6950;transform: rotate(180deg);}
-.popup-header{text-align: center;}
-.popup-name{color: #fff;font-size: 18px;font-weight: 900;text-transform: uppercase;padding: 30px 0;margin: 0;}
-.popup-body{padding: 0px 20px 20px 20px;}
 
 .home-page .slider-cover{background-color: #1F2535; background-position: center; background-repeat: no-repeat;background-size: cover;padding-bottom: 40px;}
 .home-page .slider-cover .carousel{height: 490px;position: relative;margin-right: 30px;}
@@ -1141,6 +1135,35 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 .static--wrapper .content .profile-orders-list .btn{font-size: 10px;padding: 9px 15px;float: right;}
 .static--wrapper .content .profile-orders-list .icon{display: none;}
 
+.popup-wrapper{border-radius: 5px;border: 1px solid #38405D;background-color: #272C43;position: relative;perspective: 1000px;}
+.popup-wrapper.suparounded{border-radius: 10px;}
+.popup-wrapper .popup-window{opacity: 0;position: absolute;top: 0;left: 0;right: 0;transform: rotateY(180deg);transition: opacity .25s, transform .5s;}
+.popup-wrapper .popup-window.inactive{transform: rotateY(-180deg);}
+.popup-wrapper .popup-window.active{opacity: 1;position: relative;z-index: 1;transform: rotateY(0deg);}
+.popup-wrapper .close{height: 22px;width: 22px;border-radius: 50%;opacity: 1;transition: all .2s;background: #e54e3d url(../img/icons/xw.png) center no-repeat;background-size: 8px;top: 10px;right: 10px;position: absolute;}
+.popup-wrapper .close:hover{background-color: #ff6950;transform: rotate(180deg);}
+.popup-header{text-align: center;}
+.popup-name{color: #fff;font-size: 18px;font-weight: 900;text-transform: uppercase;padding: 40px 0 30px;margin: 0;}
+.popup-body{padding: 0px 20px 20px 20px;}
+.popup-footer {padding: 0px 20px 20px 20px;}
+.popup-wrapper .socials{text-align: center;}
+.popup-wrapper .socials a.rounded{transition: all .15s;display: inline-block;line-height: 40px;width: 40px;height: 40px;color: #fff;background-color: #3d4666;border-radius: 50%;text-align: center;vertical-align: middle;margin: 10px 5px 0px;user-select: none;}
+.popup-wrapper .socials a.rounded:hover{background-color: #D64137;cursor: pointer;}
+.popup-wrapper .socials a.rounded .icon{font-size: 20px;}
+.popup-wrapper .form label{padding: 5px 0 0 0;}
+.popup-wrapper a.link{color: #e54e3d;font-size: 12px;font-weight: 900;text-decoration: underline;letter-spacing: .5px;}
+.popup-wrapper a.small{font-size: 10px;}
+.popup-wrapper a.forgot{padding: 7px 0;display: inline-block;}
+.popup-wrapper .buttons{}
+.popup-wrapper label.checkbox-line-container{margin: 0;float: left;padding: 13px 0;}
+.popup-wrapper .checkbox-line .checkmark{border-color: #38405D;}
+.popup-wrapper .buttons .btn.submit{margin: 0;float: right;padding: 15px 20px;}
+.popup-wrapper  .registration .buttons .btn.submit{margin: 5px 0 0 0;float: none;width: 100%;}
+.popup-wrapper .buttons:after{content:'';display: table;clear: both;}
+.popup-wrapper .popup-socials{border-top: 1px solid #38405D;border-bottom: 1px solid #38405D;padding: 18px 0;}
+.popup-wrapper h6{text-align: center;margin: 0;}
+.popup-wrapper .popup-toggler{padding: 18px 0 8px;letter-spacing: .5px;}
+
 @media(min-width: 1200px) {
 	header .buttons .btn span{display:block;padding: 14px 15px 13px 10px;}
 	header .buttons .btn.btn-skype i {border-right: 1px solid #171B25;}
@@ -1652,6 +1675,7 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 	.datetime-selector .btn{font-size: 14px;width: 100%;}
 	.order-slider.order-slider-single .slider-inputs{width: 100%;}
 	.order-slider.order-slider-single .slider-inputs label{width: 100%;}
+	.popup-name {font-size: 16px;padding: 30px 0 10px;}
 
 }
 

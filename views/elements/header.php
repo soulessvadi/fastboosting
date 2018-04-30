@@ -59,7 +59,7 @@
 
 			<div class="buttons columns shrink">
 				<a href="skype:manekenvs?call" class="btn btn-skype runner"><i class="icon-skype"></i><span>Skype here</span></a>
-				<a href="javascript:void(0)" class="btn btn-login runner"><i class="icon-user"></i><span>АВТОРИЗАЦИЯ</span></a>
+				<a href="javascript:void(0)" class="btn btn-login runner" data-toggle="modal" data-target=".auth-modal"><i class="icon-user"></i><span>АВТОРИЗАЦИЯ</span></a>
 			</div>
 
 			<div class="buttons columns shrink">

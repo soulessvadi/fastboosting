@@ -52,6 +52,21 @@ __.charts_establish = function(el) {
 	});
 },
 __.bindAnything = function() {
+	if($('[data-trigger="window"]').length) {
+		$('[data-trigger="window"]').on('click', function() {
+			var modal = $(this).closest('.modal');
+			var container = $(this).closest('.popup-wrapper');
+			var windowid = $(this).attr('data-target'); 
+			var windowc = $(this).closest('.popup-window'); 
+			var windowt = $(container).find('.popup-window[data-window="'+windowid+'"]');
+			console.log(windowid);
+			if(windowt.length) {
+				windowt.addClass('active');
+				windowc.addClass('inactive').removeClass('active');
+				setTimeout(function() { windowc.removeClass('inactive') }, 500)
+			}
+		});
+	}
 	if($('.profile-sidebar-trigger').length) {
 		$('.profile-sidebar-trigger').on('click', function() {
 			$(this).toggleClass('is-active');
