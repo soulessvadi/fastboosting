@@ -25,17 +25,17 @@
 							        <span>Меню</span>
 							    </button>
 								<ul class="menu-list">
-					          		<li class="active"><a href="javascript:void(0)"><i class="micon user"></i> Личные данные</a></li>
+					          		<li class="active"><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
     					          	<li class="dropdown">
-						          		<a href="javascript:void(0)"><i class="micon list"></i> Заказы</a>
+						          		<a href="profile-orders"><i class="micon list"></i> Заказы</a>
 						          		<ul class="submenu">
 						          			<li><a href="javascript:void(0)">Dota2</a></li>
 						          			<li><a href="javascript:void(0)">CS:GO</a></li>
 						          			<li><a href="javascript:void(0)">PUBG</a></li>
 						          		</ul>
 						          	</li>
-					          		<li><a href="javascript:void(0)"><i class="micon vallet"></i> Кошелек</a></li>
-					          		<li><a href="javascript:void(0)"><i class="micon support"></i> Поддержка</a></li>
+					          		<li><a href="profile-vallet"><i class="micon vallet"></i> Кошелек</a></li>
+					          		<li><a href="profile-support"><i class="micon support"></i> Поддержка</a></li>
 					          		<li><a href="javascript:void(0)"><i class="micon exit"></i> Выйти</a></li>
   					        	</ul>
 							</div>
@@ -151,7 +151,7 @@
 								</div>
 								<div class="info-line">
 									<h6 class="title">Последний активный заказ в работе</h6>
-									<table class="profile-orders-list">
+									<table class="profile-info-table">
 										<thead>
 											<tr class="heading"><td>ID</td><td>Дата</td><td>Игра</td><td>Желаемый прогресс</td><td>Статус</td><td></td></tr>											
 										</thead>

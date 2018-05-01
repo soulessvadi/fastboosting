@@ -156,3 +156,57 @@
 		</div> 
 	</div>
 </div>
+
+<div class="modal fade new-ticket-popup" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document"> 
+		<div class="popup-wrapper suparounded"> 
+
+			<div class="popup-window ticket active" data-window="1">
+
+				<div class="popup-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+					<h4 class="popup-name">Создать тикет</h4> 
+				</div> 
+
+				<div class="popup-body">
+					
+					<div class="form">
+						<label>
+							<p>Игра</p>
+							<div class="select">
+								<select>
+									<option value="1">Бустер от 2500 до 5000 MMR</option>
+									<option value="2">Бустер от 5000 до 6500 MMR</option>
+									<option value="3">Бустер от 7000 MMR</option>
+									<option value="4">Игрок-танк</option>
+									<option value="5">Менеджер по работе с игроками</option>
+								</select>							
+							</div>
+						</label>
+						<label>
+							<p>Тема тикета</p>
+							<div class="select">
+								<select>
+									<option value="1">Бустер от 2500 до 5000 MMR</option>
+									<option value="2">Бустер от 5000 до 6500 MMR</option>
+									<option value="3">Бустер от 7000 MMR</option>
+									<option value="4">Игрок-танк</option>
+									<option value="5">Менеджер по работе с игроками</option>
+								</select>							
+							</div>
+						</label>
+						<label>
+							<textarea rows="7" placeholder="Введите сообщение"></textarea>
+						</label>
+						<div class="buttons">	
+							<button class="btn btn-red runner submit">создать тикет</button>				
+						</div>
+					</div>
+
+				</div> 
+
+			</div>
+
+		</div> 
+	</div>
+</div>
