@@ -520,66 +520,76 @@
 					</div>
 				</div>
 				<div class="cell col-xs-12 col-sm-12 col-md-8 col-lg-8">
-					<div class="works-reviews">
-						<div class="item col-xs-6">
-							<div class="review">
-								<div class="item">
-									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
-									<div class="text">
-										<h6>Андрей Бустер</h6>
-										<div class="theme">Буст аккаунта Dota2</div>
-										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="message">
-											<p>Отличный сервис, рекомендую</p>
+					<div class="carousel slide" id="reviews-slider" data-ride="carousel">
+	  					<div class="carousel-inner">
+	  						<?php for($x = 0; $x < 4; $x++): ?>
+								<div class="works-reviews item <?= !$x ? 'active' : '' ?>">
+									<div class="item col-xs-6">
+										<div class="review">
+											<div class="item">
+												<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+												<div class="text">
+													<h6>Андрей Бустер</h6>
+													<div class="theme">Буст аккаунта Dota2</div>
+													<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+													<div class="message">
+														<p>Отличный сервис, рекомендую</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item col-xs-6">
+										<div class="review">
+											<div class="item">
+												<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+												<div class="text">
+													<h6>Андрей Бустер</h6>
+													<div class="theme">Буст аккаунта Dota2</div>
+													<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+													<div class="message">
+														<p>Отличный сервис, рекомендую</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item col-xs-6">
+										<div class="review">
+											<div class="item">
+												<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+												<div class="text">
+													<h6>Андрей Бустер</h6>
+													<div class="theme">Буст аккаунта Dota2</div>
+													<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+													<div class="message">
+														<p>Отличный сервис, рекомендую</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item col-xs-6">
+										<div class="review">
+											<div class="item">
+												<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
+												<div class="text">
+													<h6>Андрей Бустер</h6>
+													<div class="theme">Буст аккаунта Dota2</div>
+													<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
+													<div class="message">
+														<p>Отличный сервис, рекомендую</p>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+							<?php endfor; ?>
 						</div>
-						<div class="item col-xs-6">
-							<div class="review">
-								<div class="item">
-									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
-									<div class="text">
-										<h6>Андрей Бустер</h6>
-										<div class="theme">Буст аккаунта Dota2</div>
-										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="message">
-											<p>Отличный сервис, рекомендую</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item col-xs-6">
-							<div class="review">
-								<div class="item">
-									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
-									<div class="text">
-										<h6>Андрей Бустер</h6>
-										<div class="theme">Буст аккаунта Dota2</div>
-										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="message">
-											<p>Отличный сервис, рекомендую</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item col-xs-6">
-							<div class="review">
-								<div class="item">
-									<div class="logo"><div class="avatar" style="background-image: url();"></div></div>
-									<div class="text">
-										<h6>Андрей Бустер</h6>
-										<div class="theme">Буст аккаунта Dota2</div>
-										<div class="rating r-4"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="message">
-											<p>Отличный сервис, рекомендую</p>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="controls">
+							<a class="prev" href="#reviews-slider" data-slide="prev"><i class="icon icon-left-open"></i></a>
+							<a class="next" href="#reviews-slider" data-slide="next"><i class="icon icon-right-open"></i></a>	
 						</div>
 					</div>
 				</div>

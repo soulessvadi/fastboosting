@@ -210,3 +210,36 @@
 		</div> 
 	</div>
 </div>
+
+<div class="modal fade email-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document"> 
+		<div class="popup-wrapper suparounded"> 
+
+			<div class="popup-window active registration">
+
+				<div class="popup-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+					<h4 class="popup-name">Смена e-mail</h4> 
+				</div> 
+
+				<div class="popup-body">
+					
+					<div class="form">
+						<label>
+							<input type="text" placeholder="Введите Ваш e-mail">
+						</label>
+						<label>
+							<input type="text" placeholder="Повторите Ваш e-mail">
+						</label>
+						<div class="buttons">
+							<button class="btn btn-red runner submit">Сменить</button>				
+						</div>
+					</div>
+
+				</div> 
+
+			</div>
+
+		</div> 
+	</div>
+</div>

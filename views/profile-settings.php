@@ -63,7 +63,7 @@
 											<small>E-mail подтвержден</small>
 										</div>
 										<div class="buttons">
-											<button class="btn btn-red runner">Изменить</button>
+											<button class="btn btn-red runner" data-toggle="modal" data-target=".email-modal">Изменить</button>
 										</div>
 									</div>
 									<div class="inputs-line">
@@ -74,23 +74,26 @@
 											<input type="text" value="***********" readonly disabled>
 											<small>Ваш пароль</small>
 										</div>
+										<div class="buttons">
+											<button class="btn btn-red runner" data-toggle="visibility" data-target=".inputs-line.recovery-line">Изменить</button>
+										</div>
 									</div>
-									<div class="inputs-line">
+									<div class="inputs-line recovery-line">
 										<div class="inputs">
 											<div class="default multiple flex">
 												<label class="column">
-													<input type="password" placeholder="Введите ваш старый пароль">
+													<input type="text" placeholder="Введите ваш старый пароль">
 												</label>
 												<label class="column">
-													<input type="password" placeholder="Введите ваш новый пароль">
+													<input type="text" placeholder="Введите ваш новый пароль">
 												</label>
 												<label class="column">
-													<input type="password" placeholder="Повторите ваш новый пароль">
+													<input type="text" placeholder="Повторите ваш новый пароль">
 												</label>
 											</div>
 										</div>
 										<div class="buttons">
-											<button class="btn btn-red runner">Сохранить</button>
+											<button class="btn btn-red runner" data-toggle="visibility">Сохранить</button>
 										</div>
 									</div>
 								</div>

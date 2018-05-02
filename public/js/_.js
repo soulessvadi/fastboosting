@@ -52,6 +52,18 @@ __.charts_establish = function(el) {
 	});
 },
 __.bindAnything = function() {
+	if($('[data-toggle="visibility"]').length) {
+		$('[data-toggle="visibility"]').on('click', function() {
+			var button = $(this);
+		 	var target = $(this).attr('data-target');
+		 	$(button).animate({opacity:0}, 200);
+			$(target).addClass('active');
+			$(target).find('[data-toggle="visibility"]').off().on('click', function() {
+				$(target).removeClass('active');
+				$(button).animate({opacity:1}, 200);
+			});
+		});
+	}
 	if($('[data-trigger="window"]').length) {
 		$('[data-trigger="window"]').on('click', function() {
 			var modal = $(this).closest('.modal');

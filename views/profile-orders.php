@@ -3,7 +3,7 @@
 		<div class="container">
 			<span><a href="home">Главная</a></span>
 			<span>Профиль</span>
-			<span>Техподдержка</span>			
+			<span>Заказы</span>			
 		</div>
 	</section>
 	<section class="mh30"></section>
@@ -25,8 +25,8 @@
 							        <span>Меню</span>
 							    </button>
 								<ul class="menu-list">
-					          		<li class="active"><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
-    					          	<li class="dropdown">
+					          		<li class=""><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
+    					          	<li class="active dropdown">
 						          		<a href="profile-orders"><i class="micon list"></i> Заказы</a>
 						          		<ul class="submenu">
 						          			<li><a href="javascript:void(0)">Dota2</a></li>

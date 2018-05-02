@@ -3,7 +3,7 @@
 		<div class="container">
 			<span><a href="home">Главная</a></span>
 			<span>Профиль</span>
-			<span>Настройки</span>			
+			<span>Кошелек</span>			
 		</div>
 	</section>
 	<section class="mh30"></section>
