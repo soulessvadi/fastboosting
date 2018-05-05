@@ -47,10 +47,10 @@
 									<h6 class="filter-title">Текущий заказ</h6>
 									<div class="dropdown inline thin">
 										<input type="hidden" class="value" value="13714">
-										<a class="btn btn-dblue" href="javascript:void(0)">#13714 Обучение игре для новичков</a>
+										<a class="btn btn-dblue" href="javascript:void(0)">#13714 Буст аккаунта</a>
 										<ul class="dropdown--list">
 											<li class="dropdown--item active">
-												<a href="javascript:void(0);" data-tab-target=".order-tab" data-tab="1" data-value="13714">#13714 Обучение игре для новичков</a>
+												<a href="javascript:void(0);" data-tab-target=".order-tab" data-tab="1" data-value="13714">#13714 Буст аккаунта</a>
 											</li>
 											<li class="dropdown--item">
 												<a href="javascript:void(0);" data-tab-target=".order-tab" data-tab="2" data-value="21481">Пустой список</a>
@@ -60,105 +60,13 @@
 								</div>
 
 								<div class="order-tab-wrapper">
-									<div class="order-training">
-										<div class="info-line">
-											<h6 class="blue">ВЫБРАННОЕ ВРЕМЯ:</h6>
-											<div class="order-date-time">
-												<div class="cell text">
-													<h6>с</h6>
-												</div>
-												<div class="cell value">
-													<div class="datetime-selector">
-														<button class="btn dropdown">17.03.18, 12:00</button>
-													</div>
-												</div>
-												<div class="cell text">
-													<h6>до</h6>
-												</div>
-												<div class="cell value">
-													<div class="datetime-selector">
-														<button class="btn dropdown">17.03.18, 12:00</button>
-													</div>
-												</div>
-												<div class="cell button">
-													<button class="btn btn-dblue runner">Редактировать</button>
-												</div>
-											</div>
-										</div>
+									<div class="order-boosting">
 										<div class="info-line">
 											<div class="order-time-out flex">
-												<div class="time-out column">
-													<h6 class="blue">Времени осталось:</h6>
-													<div class="order-timer flex time-out-js" data-target="<?= date('M j, Y H:i:s', strtotime('+4 hours')) ?>">
-														<div class="timer column">
-															<div class="time"><span class="h">00</span><span class="desc">ЧАСОВ</span></div>
-															<div class="time dots">:</div>
-															<div class="time"><span class="m">25</span><span class="desc">МИНУТ</span></div>
-															<div class="time dots">:</div>
-															<div class="time red"><span class="s">56</span><span class="desc">СЕКУНД</span></div>
-														</div>
-														<div class="buttons column shrink">
-															<button class="btn btn-blue pause" data-text="СТАРТ">ПАУЗА</button>
-															<button class="btn btn-red stop">СТОП</button>
-														</div>
-													</div>
-													<div class="order-dropdowns flex">
-														<div class="item column">
-															<div class="dropstatic">
-																<a class="btn btn-dblue" href="javascript:void(0)">Детали заказа</a>
-																<div class="dropcontent">
-																	<p class="text-center">Детали</p>
-																</div>
-															</div>														
-														</div>
-														<div class="item column">
-															<div class="dropstatic dark">
-																<a class="btn btn-dblue" href="javascript:void(0)">Чат с тренером</a>
-																<div class="dropcontent">
-																	<div class="order-correspondence">
-																		<div class="messages">
-																			<div class="message">
-																				<div class="message-table">
-																					<div class="cell name">
-																						<p class="person">Андрей</p>
-																						<p class="position">Тренер #1 <span class="created-at">11.05</span></p>		
-																					</div>
-																				</div>
-																				<div class="message-text">
-																					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad neque architecto minus eligendi saepe! Dolorem id hic voluptate cum, impedit non, consequuntur nemo distinctio accusamus unde perferendis error aliquam praesentium.
-																				</div>
-																			</div>
-																			<div class="message self">
-																				<div class="message-table">
-																					<div class="cell name">
-																						<p class="person">Вы <span class="created-at">11.05</span></p>
-																						<p class="position">Ассистент техподдержки #1</p>		
-																					</div>
-																				</div>
-																				<div class="message-text">
-																					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad neque architecto minus eligendi saepe! Dolorem id hic voluptate cum, impedit non, consequuntur nemo distinctio accusamus unde perferendis error aliquam praesentium.
-																				</div>
-																			</div>
-																			<div class="message">
-																				<div class="message-table">
-																					<div class="cell name">
-																						<p class="person">Андрей</p>
-																						<p class="position">Тренер #1 <span class="created-at">11.05</span></p>		
-																					</div>
-																				</div>
-																				<div class="message-text">
-																					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad neque architecto minus eligendi saepe! Dolorem id hic voluptate cum, impedit non, consequuntur nemo distinctio accusamus unde perferendis error aliquam praesentium.
-																				</div>
-																			</div>																		
-																		</div>
-																		<div class="form">
-																			<label class="new-message"><input type="text" placeholder="Введите ваше сообщение"></label>
-																		</div>
-																	</div>
-																</div>
-															</div>														
-														</div>
-													</div>
+												<div class="slider column">
+													<div class="slider-toddler">
+														<div class="slider--demo" data-start="2400" data-current="8000" data-end="8000" disabled></div>
+													</div>												
 												</div>
 												<div class="additional-info column shrink">
 													<h6 class="blue">ДОП.ИНФОРМАЦИЯ</h6>
@@ -180,17 +88,52 @@
 														</div>
 														<div class="column">
 															<div class="details-line">
-																<span class="name">Имя тренера</span><span class="value bold">TRAINER #1</span>
+																<span class="name">Имя бустера</span><span class="value bold">TRAINER #1</span>
 															</div> 
 														</div>
 														<div class="column">
 															<div class="details-line">
-																<span class="name">Рейтинг тренера</span><span class="value bold">7000</span>
+																<span class="name">Рейтинг бустера</span><span class="value bold">7000</span>
 															</div> 
 														</div>
 													</div>
 												</div>
 											</div>
+											<div class="order-dropdowns fluid flex">
+												<div class="item column">
+													<div class="dropstatic">
+														<a class="btn" href="javascript:void(0)">Детали заказа</a>
+														<div class="dropcontent">
+															<p class="text-center">Детали</p>
+														</div>
+													</div>														
+												</div>
+												<div class="item column">
+													<div class="dropstatic">
+														<a class="btn" href="javascript:void(0)">Детали Аккаунта</a>
+														<div class="dropcontent">
+															<div class="form">
+																<label>
+																	<p>Логин аккаунта</p>
+																	<div class="e-field"><input type="text" placeholder="*************" value="*************"></div>
+																</label>
+																<label>
+																	<p>Пароль аккаунта</p>
+																	<div class="e-field"><input type="text" placeholder="*************" value="*************"></div>
+																</label>
+																<button class="btn btn-red runner submit">Сменить</button>
+															</div>
+														</div>
+													</div>														
+												</div>
+												<div class="item column">													
+												</div>
+											</div>
+										</div>
+										<div class="info-line order-finished" style="background-image: url(public/img/order-finished.jpg);">	
+											<h6 class="white">Буст Вашего аккаунта завершен</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae asperiores odio voluptatem perferendis quisquam? Modi praesentium at assumenda omnis iusto, ut quidem sapiente laboriosam corporis consequuntur, eveniet officiis consequatur molestias.</p>
+											<a href="order-done" class="btn btn-red runner">Оставить отзыв и получить бонусы</a>
 										</div>
 										<div class="info-line">
 											<h6 class="white">История игр</h6>

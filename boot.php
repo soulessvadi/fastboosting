@@ -9,7 +9,7 @@ $view = implode('/', [__DIR__, "views", $filename]);
 
 function yields($path) {
 	ob_start();
-	$gameslist = [['img'=>'1.png'],['img'=>'2.png'],['img'=>'3.png'],['img'=>'4.png'],['img'=>'5.png'],['img'=>'6.1.png'],['img'=>'7.png'],];
+	$gameslist = [['img'=>'Dota.svg'],['img'=>'BATTLEGROUNDS.svg'],['img'=>'HEARTH.svg'],['img'=>'OWERWATCH.svg'],['img'=>'LEAGUE.svg'],['img'=>'CS.svg'],['img'=>'WOT.svg']];
 	file_exists($path) 
 	? include($path) 
 	: include(implode('/', [__DIR__, "views", "home.php"]));

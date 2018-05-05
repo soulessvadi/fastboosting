@@ -8,7 +8,7 @@
 	</section>
 	<section class="mh30"></section>
 	<section class="order-form">
-		<div class="container">		
+		<div class="container flex">		
 
 			<div class="col-sm-12 col-md-9 main-content">
 				<div class="static--wrapper">
@@ -299,7 +299,7 @@
 			</div>
 
 			<div class="col-sm-12 col-md-3">
-				<div class="order-side-info">
+				<div class="order-side-info chaser-rail">
 					<div class="order-info chaser chaser-md">
 						<h5>Информация о заказе</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus asperiores numquam enim exercitationem officiis voluptatum molestias consectetur aspernatur dolorum.</p>
@@ -334,8 +334,12 @@
 						<div class="separator"></div>	
 						<div class="order-info--footer">
 							<div class="chaser chaser-xs chaser-sm">
-								<a href="javascipt:void(0)" class="promo-link">У Вас есть промокод?</a>
+								<a href="javascipt:void(0)" class="promo-link promo-code-entry-trigger">У Вас есть промокод?</a>
 								<span class="total-amount">$50.00</span>
+								<label class="promo-code-entry">
+									<input type="text" placeholder="Ваш промокод">
+									<button class="runner">OK</button>
+								</label>
 								<button class="btn btn-red runner">Продолжить</button>
 							</div>				
 						</div>	

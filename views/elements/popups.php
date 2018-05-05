@@ -243,3 +243,60 @@
 		</div> 
 	</div>
 </div>
+
+<div class="modal fade refill-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-sm" role="document"> 
+		<div class="popup-wrapper suparounded"> 
+
+			<div class="popup-window active registration">
+
+				<div class="popup-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+					<h4 class="popup-name">Пополнение счета</h4> 
+				</div> 
+
+				<div class="popup-body">
+					
+					<div class="form">
+						<label>
+							<input type="text" placeholder="$500.00" value="$500.00">
+						</label>
+						<div class="buttons">
+							<button class="btn btn-red runner submit">продолжить</button>				
+						</div>
+					</div>
+
+				</div> 
+
+			</div>
+
+		</div> 
+	</div>
+</div>
+
+<div class="modal fade thanks-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-md" role="document"> 
+		<div class="popup-wrapper suparounded"> 
+			<div class="popup-window active registration">
+				<div class="popup-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> 
+				</div> 
+				<div class="popup-body">
+					<img src="public/img/icons/settingsico.png">
+					<h6 class="title">Спасибо!</h6>
+					<h6>Остался один шаг что бы начать</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<div class="buttons flex align-center">
+						<div class="column shrink">
+							<a href="home" class="btn btn-red runner">Вернуться на главную</a>
+						</div>
+						<div class="column shrink">
+							<a class="btn btn-red runner" data-dismiss="modal">Перейти к настройке</a>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div> 
+	</div>
+</div>
+

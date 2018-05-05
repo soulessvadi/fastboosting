@@ -3,7 +3,7 @@
 		<div class="container">
 			<span><a href="home">Главная</a></span>
 			<span>Профиль</span>
-			<span>Кошелек</span>			
+			<span>Заказы</span>			
 		</div>
 	</section>
 	<section class="mh30"></section>
@@ -26,7 +26,7 @@
 							    </button>
 								<ul class="menu-list">
 					          		<li><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
-    					          	<li class="dropdown">
+    					          	<li class="active dropdown">
 						          		<a href="profile-orders"><i class="micon list"></i> Заказы</a>
 						          		<ul class="submenu">
 						          			<li><a href="javascript:void(0)">Dota2</a></li>
@@ -34,41 +34,31 @@
 						          			<li><a href="javascript:void(0)">PUBG</a></li>
 						          		</ul>
 						          	</li>
-					          		<li class="active"><a href="profile-vallet"><span class="annunciator">2</span> <i class="micon vallet"></i> Кошелек</a></li>
+					          		<li><a href="profile-vallet"><span class="annunciator">2</span> <i class="micon vallet"></i> Кошелек</a></li>
 					          		<li><a href="profile-support"><i class="micon support"></i> Поддержка</a></li>
 					          		<li><a href="javascript:void(0)"><i class="micon exit"></i> Выйти</a></li>
   					        	</ul>
 							</div>
 						</div>
 						<div class="column profile-content-contaiter">
-							<div class="profile-content balance">
+							<div class="profile-content orders">
 
 								<div class="info-line">
-									<h6 class="title">Ваш баланс</h6>
-									<div class="balance">
-										<span class="sum">$ <span>564.22</span></span>
-										<button class="btn btn-red runner" data-toggle="modal" data-target=".refill-modal">Пополнить баланс</button> 
+									<h6 class="filter-title">Текущий заказ</h6>
+									<div class="dropdown inline thin">
+										<input type="hidden" class="value" value="13714">
+										<a class="btn btn-dblue" href="javascript:void(0)">Список пуст</a>
 									</div>
 								</div>
-								
-								<div class="info-line">
-									<h6 class="title">История транзакций</h6>
-									<table class="profile-info-table transactions">
-										<thead>
-											<tr class="heading"><td>ID</td><td>Дата</td><td>Сумма</td><td>Действие</td><td>Статус</td></tr>											
-										</thead>
-										<tbody>
-											<tr>
-												<td>1331</td>
-												<td>16.02.2017</td>
-												<td>$567.22</td>
-												<td>Пополнение с кошелька Qiwi</td>
-												<td>В работе</td>
-											</tr>											
-										</tbody>
-									</table>
-								</div>
 
+								<div class="order-tab-wrapper">
+									<div class="active-orders-empty">
+										<div class="info-line empty text-center">
+											<p>К сожалению, у Вас нет активных заказов.</p>
+											<a href="orders-boost" class="btn btn-red runner">Создать заказ</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

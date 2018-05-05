@@ -25,7 +25,7 @@
 							        <span>Меню</span>
 							    </button>
 								<ul class="menu-list">
-					          		<li class="active"><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
+					          		<li><a href="profile-settings"><i class="micon user"></i> Личные данные</a></li>
     					          	<li class="dropdown">
 						          		<a href="profile-orders"><i class="micon list"></i> Заказы</a>
 						          		<ul class="submenu">
@@ -35,7 +35,7 @@
 						          		</ul>
 						          	</li>
 					          		<li><a href="profile-vallet"><span class="annunciator">2</span> <i class="micon vallet"></i> Кошелек</a></li>
-					          		<li><a href="profile-support"><i class="micon support"></i> Поддержка</a></li>
+					          		<li class="active"><a href="profile-support"><i class="micon support"></i> Поддержка</a></li>
 					          		<li><a href="javascript:void(0)"><i class="micon exit"></i> Выйти</a></li>
   					        	</ul>
 							</div>
