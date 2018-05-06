@@ -642,13 +642,14 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .dropdown .dropdown--list{list-style: none; position: absolute;z-index:-1; top: 100%;left: 0;right:0;padding: 0;margin:0;background-color: #38415F;border-radius: 0 0 5px 5px;transition: padding-bottom .4s;}
 .dropdown .dropdown--list .dropdown--item{opacity: 0; height: 0;transition: all .2s;transition-delay: height .15s; text-align: left;padding-left: 15px;}
 .dropdown .dropdown--list .dropdown--item:hover,.dropdown .dropdown--list .dropdown--item.active{background-color: #e54e3d;}
-.dropdown .dropdown--list .dropdown--item:after{content:'';display: inline-block;height: 100%;vertical-align: middle;position: absolute;}
+.dropdown .dropdown--list .dropdown--item:after{content:'';display: inline-block;height: 100%;vertical-align: middle;}
 .dropdown .dropdown--list li a{color: #fff;display: block;padding: 6px 0;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .dropdown.inline .dropdown--list .dropdown--item{padding-left: 0;}
 .dropdown.inline .dropdown--list .dropdown--item a{padding-left: 15px;padding-right: 5px;font-size: 12px;}
 .dropdown.inline {display: inline-block;}
 .dropdown.inline .btn{font-size: 10px;padding: 11px 30px 11px 22px;border: 1px solid #414860;background-color: #293049;}
-.dropdown.inline .btn:after{font-size: 14px;line-height: 12px;margin-left: 15px;position: absolute;right: 12px;}
+.dropdown.inline .btn:after{font-size: 14px;line-height: 12px;margin-left: 15px;position: absolute;right: 12px;top:10px;}
+.dropdown.inline.thin .btn:after{top: 7px;}
 .dropdown.inline .btn:focus + .dropdown--list{padding-bottom: 5px;}
 .dropdown.inline .dropdown--list{padding-bottom: 5px;}
 .dropdown.inline.thin .btn{font-size: 11px;font-weight: 400;padding: 7px 22px 7px 12px;width: 200px;overflow: hidden;text-overflow: ellipsis;}
