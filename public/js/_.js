@@ -126,13 +126,14 @@ __.bindAnything = function() {
 		$(".time-out-js").each(function() {
 			var timer = $(this), timer_h = timer.find('.h'), timer_m = timer.find('.m'), timer_s = timer.find('.s');
 			var pause_trigger = timer.find('.pause');
-			var start = timer.attr('data-target');
-			var till = new Date(start).getTime();
+			var stop_trigger = timer.find('.stop');
+			var timeout = timer.attr('data-target');
+			var till = new Date(timeout * 1000).getTime();
 			var pause = false;
-			var x = setInterval(function() {
+			var interval = setInterval(function() {
 				if(!pause) {
-					var now = new Date().getTime();
-					var distance = till - now;
+					till -= 1000;
+					var distance = till;
 					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 					var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -144,10 +145,10 @@ __.bindAnything = function() {
 					var seconds = ("00" + seconds).substr(-2);
 					if(timer_h.text().trim() != hours) timer_h.text(hours);
 					if(timer_m.text().trim() != minutes) timer_m.text(minutes);
-					if(timer_s.text().trim() != seconds) timer_s.text(seconds);					
+					if(timer_s.text().trim() != seconds) timer_s.text(seconds);
 				}
 
-				if(distance < 0) clearInterval(x);
+				if(distance < 0) clearInterval(interval);
 			}, 1000);
 
 			pause_trigger.on('click', function() {
@@ -157,6 +158,10 @@ __.bindAnything = function() {
 				pause_trigger.text(b);
 				pause_trigger.attr('data-text', a);
 				pause_trigger.toggleClass('play');
+			});
+
+			stop_trigger.on('click', function() {
+				clearInterval(interval);
 			});
 
 		});

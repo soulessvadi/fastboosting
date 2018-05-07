@@ -89,13 +89,13 @@
 											<div class="order-time-out flex">
 												<div class="time-out column">
 													<h6 class="blue">Времени осталось:</h6>
-													<div class="order-timer flex time-out-js" data-target="<?= date('M j, Y H:i:s', strtotime('+4 hours')) ?>">
+													<div class="order-timer flex time-out-js" data-target="<?= 4 * 60 * 60 ?>">
 														<div class="timer column">
 															<div class="time"><span class="h">00</span><span class="desc">ЧАСОВ</span></div>
 															<div class="time dots">:</div>
-															<div class="time"><span class="m">25</span><span class="desc">МИНУТ</span></div>
+															<div class="time"><span class="m">00</span><span class="desc">МИНУТ</span></div>
 															<div class="time dots">:</div>
-															<div class="time red"><span class="s">56</span><span class="desc">СЕКУНД</span></div>
+															<div class="time red"><span class="s">00</span><span class="desc">СЕКУНД</span></div>
 														</div>
 														<div class="buttons column shrink">
 															<button class="btn btn-blue pause" data-text="СТАРТ">ПАУЗА</button>

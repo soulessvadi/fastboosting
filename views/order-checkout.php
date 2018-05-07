@@ -113,7 +113,7 @@
 											<div class="accept flex">
 												<div class="column">
 													<label class="checkbox-line">
-														<span>Я согласен с <a href="javascipt:void(0)">правилами</a> и готов к оплате</span>
+														<span>Я согласен с <a href="javascript:void(0)">правилами</a> и готов к оплате</span>
 														<input type="checkbox" name="box">
 														<span class="checkmark"></span>
 													</label>
@@ -162,7 +162,7 @@
 						<div class="separator"></div>	
 						<div class="order-info--footer">
 							<div class="chaser chaser-xs chaser-sm">
-								<a href="javascipt:void(0)" class="promo-link promo-code-entry-trigger">У Вас есть промокод?</a>
+								<a href="javascript:void(0)" class="promo-link promo-code-entry-trigger">У Вас есть промокод?</a>
 								<span class="total-amount">$50.00</span>
 								<label class="promo-code-entry">
 									<input type="text" placeholder="Ваш промокод">

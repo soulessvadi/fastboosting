@@ -7,6 +7,10 @@
   flex-flow: row wrap;
 }
 
+.flex:before{
+	display: none!important;
+}
+
 .flex .flex {
   margin-right: -0.9375rem;
   margin-left: -0.9375rem;

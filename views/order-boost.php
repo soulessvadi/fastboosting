@@ -249,7 +249,7 @@
 						<div class="separator"></div>	
 						<div class="order-info--footer">
 							<div class="chaser chaser-xs chaser-sm">
-								<a href="javascipt:void(0)" class="promo-link promo-code-entry-trigger">У Вас есть промокод?</a>
+								<a href="javascript:void(0)" class="promo-link promo-code-entry-trigger">У Вас есть промокод?</a>
 								<span class="total-amount">$50.00</span>
 								<label class="promo-code-entry">
 									<input type="text" placeholder="Ваш промокод">
