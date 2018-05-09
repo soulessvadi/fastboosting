@@ -243,7 +243,7 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .games-list--triggers .item a.load-more span{float: none;display: inline-block;height: 100%;padding: 20px 0;}
 .games-list--triggers .item a.load-more i{display: block;font-size: 18px;line-height: 18px;font-weight: 100;}
 .games-list--triggers .item a:after{content: ''; display: inline-block; height: 100%; vertical-align: middle;margin-right: -4px;}
-.games-list--tab{display: none;animation:animateblur 0.7s ease-in;-webkit-backface-visibility: hidden;}
+.games-list--tab{display: none;animation:animateblur 0.7s ease-in;-moz-animation:none;-webkit-backface-visibility: hidden;}
 .games-list--tab.inactive{display:block;position: absolute;z-index: 0;top:0;left:0;right:30px;animation:animatemoveout 0.9s ease;opacity: 0.7;}
 .games-list--tab.active{display: block;position: relative; z-index: 1;}
 .games-list--tab .item{position:relative;}
@@ -265,10 +265,11 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .games-list--presenter .games-list--wrapper .item .content .content--order{display: table-cell;width: 45%;vertical-align: middle;text-align: center;}
 .games-list--presenter .games-list--wrapper .item .content .content--order span{font:400 12px 'Lato';color: #fff;}
 .games-list--presenter .games-list--wrapper .item .content .content--order .btn{text-transform: uppercase;font-weight: 900;font-size: 12px;padding: 12px 32px;margin-top: 12px;}
-@keyframes animatemoveleft{from{left:-50%;} to{left:0;}}
-@keyframes animatemoveright{from{left:0;} to{left:50%;}}
+@keyframes animatemoveleft{from{transform:translateX(-50%);} to{transform:translateX(0);}}
+@keyframes animatemoveright{from{transform:translateX(0);} to{transform:translateX(50%);}}
 @keyframes animatemoveout{from{opacity:1;transform: scale(1);} to{opacity:0.1;transform: scale(0.1);}}
 @keyframes animateblur{from{filter:blur(50px);} to{filter:blur(0px);}}
+@keyframes animateopacity{from{opacity: 0;} to{opacity: 1;}}
 
 .games-list--advantages{padding-right: 30px;border-radius: 10px;}
 .games-list--advantages .header{background: #272C43;border-radius: 10px 10px 0 0;text-align: center;padding: 20px 0;height: 60px;}
@@ -472,7 +473,9 @@ footer .paysystems a:hover{box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.5);}
 .form .select select {-moz-appearance: none;-webkit-appearance: none;appearance: none;}
 .form .select select::-ms-expand {display: none;}
 .form .btn{font:900 12px 'Lato';text-transform: uppercase;margin-top: 20px;}
-.form .e-field{display: block;background: #181C26 url(../img/icons/editicosm.png) 95% center no-repeat;background-size: 12px;border-radius: 5px;}
+.form .e-field{display: block;position: relative; background-color: #181C26;background-size: 12px;border-radius: 5px;z-index: 1;}
+.form .e-field .edit{transition: all .3s;display:block;position: absolute;top: 0;right: 0;z-index: 2;width: 24px;height: 100%;background: url(../img/icons/editicosm.png) center no-repeat;background-size: 12px;cursor: pointer;transform: rotate(360deg) scale(1);}
+.form .e-field .edit:hover{transform: rotate(0deg) scale(1.2);}
 .form .e-field input{border:none;background-color: transparent;outline: none;color: #fff;width: 100%;font-weight: 400;font-size: 12px;padding: 7px 20px 7px 20px;border:1px solid transparent;}
 .form .e-field input::placeholder{color: #818ea4;}
 .form .e-field.disabled{background: transparent;}
@@ -1261,6 +1264,7 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 .profile-info-table.transactions{font-size: 14px;}
 .profile-info-table{color: #fff;font-size: 12px;font-weight: 400;width: 100%;}
 .profile-info-table thead tr{font-weight: 700;}
+.profile-info-table tbody tr:not(:last-child){border-bottom:1px solid #22283b;}
 .profile-info-table thead tr td{background-color: #22A1CA;}
 .profile-info-table tbody{border:1px solid #22283b;border-top:none;background-color: #171c29;}
 .profile-info-table tr:first-child td:first-child{border-radius: 5px 0 0 0;}
@@ -1320,8 +1324,10 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 .chart-bar-stacked>*:nth-child(3){background-color: #B09B19;border-radius: 0 5px 5px 0;}
 
 .order-correspondence{font-size: 14px;color: #fff;}
-.order-correspondence .messages{max-height: 315px;overflow-y: auto;padding-right: 10px;margin-right: -10px;}
-.order-correspondence .message{padding: 0;padding-bottom: 17px;}
+.order-correspondence .messages{max-height: 315px;overflow-y: auto;padding-right: 10px;margin-right: -10px;margin-left: -8px;}
+.order-correspondence .message:last-child{margin-bottom: 0;}
+.order-correspondence .message{padding: 8px;margin-bottom: 5px;box-shadow: inset 0px 0px 60px 0px rgba(8, 17, 39, 0.4);}
+.order-correspondence .message.self {box-shadow: inset 0px 0px 40px 0px rgba(22, 160, 204, 0.3);}
 .order-correspondence .message-table{display: table;width: 100%;}
 .order-correspondence .message-table .cell{display: table-cell;vertical-align: top;}
 .order-correspondence .message-table .cell.image{min-width: 35px;}
@@ -1329,7 +1335,8 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 .order-correspondence .message-table .avatar{width: 42px;height: 42px;border:1px solid #3D4665;border-radius: 5px;background-color: #293049;overflow: hidden;}
 .order-correspondence .message-table .avatar img{max-width: 100%; max-height: 100%;}
 .order-correspondence .position{font-size: 11px;font-weight: 400;color: #e54e3d;}
-.order-correspondence .person{font-size: 14px;color: #BBBBBD;font-weight: 900}
+.order-correspondence .person{font-size: 14px;color: #BBBBBD;font-weight: 900;}
+.order-correspondence .message.self .person{color: #3899c7;}
 .order-correspondence .created-at{display: inline-block;float: right;font-weight: 700;font-size: 10px;color: #BBBBBD;}
 .order-correspondence .message-text{font-size: 12px;color: #8c9ab0;padding-top: 10px;}
 .order-correspondence .message.self .position{display: none;}
@@ -1343,8 +1350,19 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 .order-tab.active{opacity: 1;transform: rotateY(0deg);}
 .active-orders-empty{padding: 30px;}
 .active-orders-empty .info-line.empty{padding: 45px;background-color: #181C26;border:1px solid #212635;border-radius: 10px;}
+.active-orders-empty .info-line.empty.p20{padding: 20px;}
+.active-orders-empty .info-line.empty.mb35{margin-bottom: 35px;}
+.active-orders-empty .games-list--presenter{padding-top: 0;}
+.active-orders-empty .games-list--presenter .games-list--wrapper{padding-right: 0;}
+.active-orders-empty .games-list--presenter .games-list--tab{display: block;animation: none;perspective: 1000px;}
+.active-orders-empty .games-list--presenter .games-list--tab .item{animation-name: rotateX;position: relative;}
+.active-orders-empty .games-list--presenter .games-list--tab .item .tags{position: absolute;left: 20px; top: 20px;}
+.active-orders-empty .games-list--presenter .games-list--tab .item .tags .tag{font-size: 7px;padding: 5px 8px 4px 8px;}
+@keyframes rotateX{from{transform: rotateX(90deg);}to{transform: rotateX(0deg)}}
+.active-orders-empty .games-list--presenter .games-list--wrapper .item:last-child{margin-bottom: 0;}
+.active-orders-empty .games-list--presenter .games-list--wrapper .item .content{background-color: transparent;}
 .active-orders-empty .info-line.empty p{font:400 14px 'Lato';color: #e5e5e5;}
-.active-orders-empty .info-line.empty .btn{display: inline-block;margin-top: 15px;padding: 12px 25px;}
+.active-orders-empty .info-line.empty .btn.mt15{display: inline-block;margin-top: 15px;padding: 12px 25px;}
 
 .order-timer{padding: 0;}
 .order-timer .timer{background: transparent url(../img/icons/timer.png) 5px 0px no-repeat;padding-left: 70px;margin-top: 5px;}
@@ -1631,6 +1649,7 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 	.settings-content .form h6 {height: auto;padding-bottom: 10px;text-align: left;    font-size: 11px;}
 	.settings-content .form{margin-left: 0;margin-right: 0;}
 	.settings-content {padding: 10px 0;}
+    .games-list--presenter .games-list--wrapper .item {height: auto;padding: 10px 0;}
 }
 
 @media (min-width: 768px) {
@@ -2001,6 +2020,9 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 	.thanks-modal .popup-body .buttons .btn {width: 100%;}
 	.thanks-modal .popup-body .buttons .column {min-width: 100%;padding-top: 5px;}
 	.thanks-modal .popup-body img {max-height: 85px;}
+    .active-orders-empty .games-list--presenter .games-list--tab .item .tags {left: auto;top: 10px;right: 10px;}
+    .active-orders-empty .info-line.empty.mb35 {margin-bottom: 15px;}
+    .games-list--presenter .games-list--wrapper .item{margin-bottom: 15px;}
 }
 
 @media (max-width: 450px) {
@@ -2054,6 +2076,8 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 	.settings-controls .btn.finish:before{right: 4px;}
 	.settings-controls .btn.prev:before{left: 4px;}
 	.row-checkout .balance-refill .btn {float: none;width: 100%;}
+    .games-list--presenter .games-list--wrapper .item{padding-top: 15px;}
+    .games-list--presenter .games-list--wrapper .item .content .content--order span{margin-top: 10px;display: inline-block;}
 }
 
 @media (max-width: 380px) {
@@ -2161,6 +2185,8 @@ html:not([dir=rtl]) .slider .noUi-horizontal .noUi-handle {right: -10px;}
 	.order-steps--row .row-body .row-checkout h6.blue{font-size: 14px;}
 	.order-steps--row .row-body .row-checkout {padding: 0 5px;}
 	.row-checkout .accept .btn {font-size: 10px;padding: 10px 5px;white-space: normal;}
+    .active-orders-empty .info-line.empty.p20{padding: 10px;}
+    .profile-content .info-line.empty.p20 .title{padding-bottom: 10px;}
 }
 
 @media (max-width: 320px) {

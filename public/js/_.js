@@ -70,6 +70,16 @@ __.bindAnything = function() {
 
 	$('[data-target=".thanks-modal"]').click();
 
+	if($('.e-field').length) {
+		$('.e-field').each(function() {
+			var edit_trigger = $(this).find('.edit');
+			var input = $(this).find('input');
+			edit_trigger.on('click', function() {
+				input.attr({disabled: !input.attr('disabled'), readonly: !input.attr('readonly')});
+			});
+		});
+	}
+
 	if($('.promo-code-entry-trigger').length) {
 		$('.promo-code-entry-trigger').on('click', function() {
 			$(this).parent().find('.promo-code-entry').fadeToggle(150);

@@ -53,10 +53,99 @@
 
 								<div class="order-tab-wrapper">
 									<div class="active-orders-empty">
-										<div class="info-line empty text-center">
+
+										<div class="info-line empty mb35 text-center">
 											<p>К сожалению, у Вас нет активных заказов.</p>
-											<a href="orders-boost" class="btn btn-red runner">Создать заказ</a>
+											<a href="javascript:void(0)" class="btn btn-red runner mt15" onclick="$('#suggested-orders-list').fadeToggle(150)">Создать заказ</a>
 										</div>
+											
+										<div class="info-line empty p20 mb35" id="suggested-orders-list" style="display: none;">
+											<div class="order-tab-wrapper">
+												<div class="games-list--presenter">
+													<div class="games-list--wrapper">
+														<div class="games-list--tab active">
+															<div class="item" style="background-image: url(public/img/games/cover1.png);">
+																<div class="content">
+																	<div class="content--text">
+																		<h5>Буст аккаунта</h5>
+																		<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h6>
+																	</div>
+																	<div class="content--order">
+																		<span>0т 1000 до 7000 MMR</span> <br>
+																		<a href="order-boost" class="btn btn-red runner">Заказать</a>
+																	</div>
+																</div>
+															</div>
+															<div class="item" style="background-image: url(public/img/games/cover2.png);">
+																<div class="tags"><a class="tag tag-discount" href="javascript:void(0)">Скидки</a></div>
+																<div class="content">
+																	<div class="content--text">
+																		<h5>Калибровка аккаунта</h5>
+																		<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h6>
+																	</div>
+																	<div class="content--order">
+																		<span>0т $1.00 до $50.00/шт.</span> <br>
+																		<a href="order-cali" class="btn btn-red runner">Заказать</a>
+																	</div>
+																</div>
+															</div>
+															<div class="item" style="background-image: url(public/img/games/cover3.png);">
+																<div class="content">
+																	<div class="content--text">
+																		<h5>Буст медали</h5>
+																		<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h6>
+																	</div>
+																	<div class="content--order">
+																		<span>0т $1.00 до $50.00/шт.</span> <br>
+																		<a href="order-medal" class="btn btn-red runner">Заказать</a>
+																	</div>
+																</div>
+															</div>
+															<div class="item" style="background-image: url(public/img/games/cover4.png);">
+																<div class="content">
+																	<div class="content--text">
+																		<h5>Обучение игры для начинающих</h5>
+																		<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h6>
+																	</div>
+																	<div class="content--order">
+																		<span>0т $1.00 до $50.00/шт.</span> <br>
+																		<a href="order-training" class="btn btn-red runner">Заказать</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="info-line empty p20">
+											<h6 class="title">История заказов</h6>
+											<table class="profile-info-table">
+												<thead>
+													<tr class="heading"><td>ID</td><td>Дата</td><td>Игра</td><td>Название заказа</td><td>Статус</td><td></td></tr>											
+												</thead>
+												<tbody>
+													<tr>
+														<td>1331</td>
+														<td>16.02.2017</td>
+														<td>Dota 2</td>
+														<td>Буст аккаунта Dota 2</td>
+														<td>Завершен</td>
+														<td><button class="btn btn-red runner"><i class="icon icon-right-open"></i><strong>подробнее</strong></button></td>
+													</tr>
+													<tr>
+														<td>1332</td>
+														<td>29.02.2017</td>
+														<td>Dota 2</td>
+														<td>Буст медали Dota 2</td>
+														<td>Завершен</td>
+														<td><button class="btn btn-red runner"><i class="icon icon-right-open"></i><strong>подробнее</strong></button></td>
+													</tr>											
+												</tbody>
+											</table>
+										</div>	
+
 									</div>
 								</div>
 							</div>

@@ -115,11 +115,17 @@
 															<div class="form">
 																<label>
 																	<p>Логин аккаунта</p>
-																	<div class="e-field"><input type="text" placeholder="*************" value="*************"></div>
+																	<div class="e-field">
+																		<input type="text" placeholder="*************" value="*************" disabled readonly>
+																		<i class="edit"></i>
+																	</div>
 																</label>
 																<label>
 																	<p>Пароль аккаунта</p>
-																	<div class="e-field"><input type="text" placeholder="*************" value="*************"></div>
+																	<div class="e-field">
+																		<input type="text" placeholder="*************" value="*************" disabled readonly>
+																		<i class="edit"></i>
+																	</div>
 																</label>
 																<button class="btn btn-red runner submit">Сменить</button>
 															</div>
